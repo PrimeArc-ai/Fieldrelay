@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
+const backend = (process.env.BACKEND_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+
 const nextConfig = {
   async rewrites() {
     return [
       {
         source: "/backend-api/:path*",
-        destination: "http://127.0.0.1:8000/api/:path*",
+        destination: `${backend}/api/:path*`,
       },
     ];
   },
