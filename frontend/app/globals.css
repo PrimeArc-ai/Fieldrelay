@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #111315;
+  color: #f1efe9;
+}
+
+::selection {
+  background: #d8643e;
+  color: #111315;
+}
+
+:focus-visible {
+  outline: 2px solid #d8643e;
+  outline-offset: 2px;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
